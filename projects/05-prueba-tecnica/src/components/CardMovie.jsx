@@ -1,6 +1,6 @@
 export function CardMovie({ title, type, year, poster }) {
   return (
-    <li>
+    <li className="movie">
       <h3>{title}</h3>
       <p>{type}</p>
       <p>{year}</p>

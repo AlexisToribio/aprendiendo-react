@@ -2,7 +2,7 @@ import { CardMovie } from "./CardMovie.jsx";
 
 export function ListOfMovies({ movies }) {
   return (
-    <ul>
+    <ul className="movies">
       {movies.map(movie => (
         <CardMovie
           key={movie.id}

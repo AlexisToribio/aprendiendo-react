@@ -19,19 +19,21 @@ export function Seeker() {
 
   return (
     <>
-      <form className="form" onSubmit={handleSubmit}>
-        <label htmlFor="search">
-          <span>Buscador de películas</span>
-          <input
-            id="search"
-            placeholder="Avengers, Star Wars, The Matrix..."
-            value={title}
-            onChange={handleChange}
-          />
-        </label>
-        <button>Buscar</button>
-      </form>
-      {loading ? <Loader /> : <Movies movies={movies} />}
+      <header>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="search">
+            <span>Buscador de películas</span>
+            <input
+              id="search"
+              placeholder="Avengers, Star Wars, The Matrix..."
+              value={title}
+              onChange={handleChange}
+            />
+          </label>
+          <button>Buscar</button>
+        </form>
+      </header>
+      <main>{loading ? <Loader /> : <Movies movies={movies} />}</main>
     </>
   );
 }
